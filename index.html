@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <style>
-      body {
-        margin: 0 auto;
-        padding: 0;
-        overflow: hidden;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    <!--We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.-->
-  </body>
-
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub's Electron example - EpicLabs</title>
+  <meta name="description" content="GitHub's Electron example">
+  <meta name="author" content="Adrian Caballero <adrian@epiclabs.io>">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+  <div id="volume-tag"></div>
+  <img id="epic-logo" src="./epiclogo.png" alt="Epic Labs" width="250" height="82" />
   <script>
     require('./renderer.js');
   </script>
-  <script type="text/javascript" src="./node_modules/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="./node_modules/p5/lib/p5.min.js"></script>
   <script type="text/javascript" src="./node_modules/p5/lib//addons/p5.sound.js"></script>
   <script type="text/javascript" src="./sketch.js"></script>
+</body>
 </html>

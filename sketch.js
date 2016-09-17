@@ -1,26 +1,40 @@
 var $ = require('jquery');
 var mic;
+var fft;
 
 function setup() {
     createCanvas($(window).width(), $(window).height());
 
-  // Create an Audio input
-  mic = new p5.AudioIn();
+    mic = new p5.AudioIn();
+    mic.start();
+    fft = new p5.FFT();
+    fft.setInput(mic);
 
-  // start the Audio Input.
-  // By default, it does not .connect() (to the computer speakers)
-  mic.start();
+    noFill();
 }
 
 function draw() {
-  background(200);
+    background(0);
+    stroke(255);
 
-  // Get the overall volume (between 0 and 1.0)
-  var vol = mic.getLevel();
-  fill(127);
-  stroke(0);
+    // Get the overall volume (between 0 and 1.0)
+    var vol = mic.getLevel();
+    $('#volume-tag').html('<span>input level: ' + Math.round(vol * 100) + ' %</span>');
 
-  // Draw an ellipse with height based on volume
-  var h = map(vol, 0, 1, height, 0);
-  ellipse(width/2, h - 25, 50, 50);
+    var spectrum = fft.analyze();
+    beginShape();
+    for (i = 0; i < spectrum.length; i++) {
+        vertex(map(i, 0, spectrum.length, 0, width - 1), map(spectrum[i], 0, 255, height, 300) );
+    }
+    endShape();
+
+    var waveform = fft.waveform();  // analyze the waveform
+    beginShape();
+    // strokeWeight(2);
+    for (var i = 0; i < waveform.length; i++){
+        var x = map(i, 0, waveform.length, 0, width);
+        var y = map(waveform[i], -1, 1, 100, 200);
+        vertex(x, y);
+    }
+    endShape();
 }

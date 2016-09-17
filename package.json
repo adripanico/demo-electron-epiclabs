@@ -1,6 +1,6 @@
 {
   "name": "demo-electron-epiclabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -12,11 +12,12 @@
   },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial"
+    "p5js",
+    "demo",
+    "example",
+    "epiclabs"
   ],
-  "author": "Adrian Caballero",
+  "author": "Adrian Caballero <adrian@epiclabs.io>",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/adripanico/demo-electron-epiclabs/issues"

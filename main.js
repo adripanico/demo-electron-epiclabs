@@ -10,7 +10,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({kiosk: true, frame: false});
+  mainWindow = new BrowserWindow({kiosk: true, frame: false, icon:'epicicon.png'});
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);

@@ -1,0 +1,25 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+#volume-tag {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 8px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+#epic-logo {
+  position: absolute;
+  width: 250px;
+  height: 82px;
+  top: 0;
+  right: 0;
+}
