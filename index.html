@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <!-- All of the Node.js APIs are available in this renderer process. -->
@@ -12,10 +19,10 @@
   </body>
 
   <script>
-    // You can also require other files to run in this process
     require('./renderer.js');
   </script>
-  <script type="text/javascript" src="./plugins/p5/p5.min.js"></script>
-  <script type="text/javascript" src="./plugins/p5/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="./node_modules/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./node_modules/p5/lib/p5.min.js"></script>
+  <script type="text/javascript" src="./node_modules/p5/lib//addons/p5.sound.js"></script>
   <script type="text/javascript" src="./sketch.js"></script>
 </html>
