@@ -1,7 +1,8 @@
+var $ = require('jquery');
 var mic;
 
 function setup() {
-  createCanvas(710, 200);
+    createCanvas($(window).width(), $(window).height());
 
   // Create an Audio input
   mic = new p5.AudioIn();
